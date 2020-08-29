@@ -1,0 +1,24 @@
+package com.franm.quine
+fun main() {
+    val fileLines = listOf(
+    )
+    var lineNumber = 1
+    fileLines.forEach {
+        if(lineNumber == 4) {
+            var innerLineNumber = 1
+            fileLines.forEach { innerIt ->
+                print("        listOf(")
+                print(innerIt.joinToString(",") + ")")
+                if (innerLineNumber != 24) println(',') else println()
+                innerLineNumber++
+            }
+        }
+        it.map {char ->
+            char.toByte().toChar()
+        }.forEach {char ->
+            print(char)
+        }
+        println()
+        lineNumber++
+    }
+}
