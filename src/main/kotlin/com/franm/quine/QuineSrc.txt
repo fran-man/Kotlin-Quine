@@ -9,8 +9,9 @@ fun main() {
             fileLines.forEach { innerIt ->
                 print("        listOf(")
                 print(innerIt.joinToString(",") + ")")
-                if (innerLineNumber != 24) println(',') else println()
+                if (innerLineNumber != 25) println(',') else println()
                 innerLineNumber++
+                lineNumber++
             }
         }
         it.map {char ->
@@ -18,7 +19,7 @@ fun main() {
         }.forEach {char ->
             print(char)
         }
-        println()
+        if (lineNumber != 50) println()
         lineNumber++
     }
 }
