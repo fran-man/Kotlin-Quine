@@ -5,7 +5,7 @@ import java.io.File
 fun main() {
     var lineNo = 1
     File("C:\\Users\\franm\\dev\\Kotlin-Quine\\src\\main\\kotlin\\com\\franm\\quine\\Quine.kt").forEachLine {
-        print("val line$lineNo = listOf(")
+        print("listOf(")
         it.toByteArray().forEach {
             print(it)
             print(',')
